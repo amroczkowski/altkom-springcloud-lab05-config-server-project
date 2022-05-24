@@ -1,0 +1,16 @@
+server:
+  port: 8200
+spring:
+  application:
+    name: project-service
+
+logging:
+  level:
+    pl.altkom.springcloud.lab02:.feign.projectservice.client: DEBUG
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: full
+        requestInterceptors:
+          - pl.altkom.springcloud.lab05.configserver.projectservice.client.interceptor.RequestHeaderCustomizerInterceptor
