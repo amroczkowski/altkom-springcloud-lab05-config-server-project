@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import pl.altkom.springcloud.lab05.configserver.projectservice.client.model.Employee;
 
-//@FeignClient(value = "employee-service")
 @FeignClient(value = "EMPLOYEE-SERVICE")
 public interface EmployeeClient {
 

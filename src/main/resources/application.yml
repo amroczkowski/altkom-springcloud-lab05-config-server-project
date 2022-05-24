@@ -14,3 +14,11 @@ feign:
         loggerLevel: full
         requestInterceptors:
           - pl.altkom.springcloud.lab05.configserver.projectservice.client.interceptor.RequestHeaderCustomizerInterceptor
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
