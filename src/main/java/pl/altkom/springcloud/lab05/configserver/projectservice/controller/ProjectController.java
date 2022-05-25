@@ -13,11 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import pl.altkom.springcloud.lab05.configserver.projectservice.controller.model.CreateProjectRequest;
 import pl.altkom.springcloud.lab05.configserver.projectservice.controller.model.Project;
 import pl.altkom.springcloud.lab05.configserver.projectservice.controller.model.UpdateProjectRequest;
 import pl.altkom.springcloud.lab05.configserver.projectservice.service.ProjectService;
 
+@Slf4j
 @RequiredArgsConstructor
 @RequestMapping("/project")
 @RestController
@@ -27,11 +29,13 @@ public class ProjectController {
 
     @GetMapping
     public List<Project> getProjects() {
+        log.info("Get all projects");
         return projectService.getProjects();
     }
 
     @GetMapping("/{id}")
     public Project getProject(@PathVariable("id") final Long projectId) {
+        log.info("Get project {}", projectId);
         return projectService.getProject(projectId);
     }
 
