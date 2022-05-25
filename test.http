@@ -1,4 +1,4 @@
-POST http://localhost:8200/project
+POST http://localhost:8080/project
 Content-Type: application/json
 
 {
@@ -7,11 +7,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8200/project/1
+GET http://localhost:8080/project/1
 
 ###
 
-POST http://localhost:8100/employee
+POST http://localhost:8080/employee
 Content-Type: application/json
 
 {
@@ -23,6 +23,6 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:8100/employee
+GET http://localhost:8080/employee
 
 ###
