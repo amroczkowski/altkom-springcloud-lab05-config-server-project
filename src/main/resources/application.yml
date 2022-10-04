@@ -6,7 +6,7 @@ spring:
 
 logging:
   level:
-    pl.altkom.springcloud.lab02:.feign.projectservice.client: DEBUG
+    pl.altkom.springcloud.lab05.configserver.projectservice.client: DEBUG
 feign:
   client:
     config:
